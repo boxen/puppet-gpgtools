@@ -10,6 +10,22 @@ This Boxen module installs [GPGTools](https://gpgtools.org/).
 class { 'gpgtools': }
 ```
 
+### Or with specific version
+
+It can be defined as a parameter
+
+```puppet
+class { 'gpgtools':
+  version => '2015.03-b6'
+ }
+```
+
+Or with hiera
+
+```yaml
+gpgtools::version: '2015.03-b6'
+```
+
 ## Required Puppet Modules
 
 * `boxen`

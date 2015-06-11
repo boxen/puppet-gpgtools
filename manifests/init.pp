@@ -1,8 +1,10 @@
 # Install GPGTools.
-class gpgtools {
+class gpgtools (
+  $version = '2015.03-b6',
+) {
   package { 'GPGTools':
     name     => 'GPGTools.pkg',
     provider => 'pkgdmg',
-    source   => 'https://releases.gpgtools.org/GPG_Suite-2015.02-b5-1161.dmg',
+    source   => "https://releases.gpgtools.org/GPG_Suite-${version}.dmg",
   }
 }
